@@ -1,0 +1,278 @@
+2023-08-05 22:32:36.266 INFO  350  [ restartedMain ] c.s.a.HelloSpringbootApplication.logStarting : Starting HelloSpringbootApplication using Java 11.0.20 on DESKTOP-0HAIVE8 with PID 2220 (D:\Workspaces\spring_workspaces\hello-springboot\target\classes started by sukey in D:\Workspaces\spring_workspaces\hello-springboot)
+2023-08-05 22:32:36.267 INFO  351  [ background-preinit ] o.h.v.i.util.Version.<clinit> : HV000001: Hibernate Validator 6.2.5.Final
+2023-08-05 22:32:36.269 DEBUG 353  [ restartedMain ] c.s.a.HelloSpringbootApplication.logStarting : Running with Spring Boot v2.7.14, Spring v5.3.29
+2023-08-05 22:32:36.269 INFO  353  [ restartedMain ] c.s.a.HelloSpringbootApplication.logStartupProfileInfo : No active profile set, falling back to 1 default profile: "default"
+2023-08-05 22:32:36.291 INFO  375  [ restartedMain ] o.s.b.d.r.ChangeableUrls.logTo : The Class-Path manifest attribute in C:\Users\sukey\.m2\repository\com\oracle\database\jdbc\ojdbc8\21.5.0.0\ojdbc8-21.5.0.0.jar referenced one or more files that do not exist: file:/C:/Users/sukey/.m2/repository/com/oracle/database/jdbc/ojdbc8/21.5.0.0/oraclepki.jar
+2023-08-05 22:32:36.291 INFO  375  [ restartedMain ] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-08-05 22:32:36.292 INFO  376  [ restartedMain ] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-08-05 22:32:37.035 INFO  1119 [ restartedMain ] o.s.b.w.e.t.TomcatWebServer.initialize : Tomcat initialized with port(s): 8080 (http)
+2023-08-05 22:32:37.040 INFO  1124 [ restartedMain ] o.a.c.h.Http11NioProtocol.log : Initializing ProtocolHandler ["http-nio-8080"]
+2023-08-05 22:32:37.041 INFO  1125 [ restartedMain ] o.a.c.c.StandardService.log : Starting service [Tomcat]
+2023-08-05 22:32:37.041 INFO  1125 [ restartedMain ] o.a.c.c.StandardEngine.log : Starting Servlet engine: [Apache Tomcat/9.0.78]
+2023-08-05 22:32:37.184 INFO  1268 [ restartedMain ] o.a.j.s.TldScanner.log : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-08-05 22:32:37.194 INFO  1278 [ restartedMain ] o.a.c.c.C.[.[.[/spring].log : Initializing Spring embedded WebApplicationContext
+2023-08-05 22:32:37.194 INFO  1278 [ restartedMain ] o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext : Root WebApplicationContext: initialization completed in 902 ms
+2023-08-05 22:32:37.460 WARN  1544 [ restartedMain ] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'memberSecurityController': Unsatisfied dependency expressed through field 'passwordEncoder'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'passwordEncoder' defined in class path resource [com/sh/app/config/WebSecurityConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.crypto.password.PasswordEncoder]: Factory method 'passwordEncoder' threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	log cannot be resolved
+	log cannot be resolved
+
+2023-08-05 22:32:37.462 INFO  1546 [ restartedMain ] o.a.c.c.StandardService.log : Stopping service [Tomcat]
+2023-08-05 22:32:37.468 INFO  1552 [ restartedMain ] o.s.b.a.l.ConditionEvaluationReportLoggingListener.logMessage : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-08-05 22:32:37.480 ERROR 1564 [ restartedMain ] o.s.b.SpringApplication.reportFailure : Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'memberSecurityController': Unsatisfied dependency expressed through field 'passwordEncoder'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'passwordEncoder' defined in class path resource [com/sh/app/config/WebSecurityConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.crypto.password.PasswordEncoder]: Factory method 'passwordEncoder' threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	log cannot be resolved
+	log cannot be resolved
+
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:662)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:642)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:921)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.sh.app.HelloSpringbootApplication.main(HelloSpringbootApplication.java:21)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'passwordEncoder' defined in class path resource [com/sh/app/config/WebSecurityConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.crypto.password.PasswordEncoder]: Factory method 'passwordEncoder' threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	log cannot be resolved
+	log cannot be resolved
+
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:486)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:659)
+	... 25 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.crypto.password.PasswordEncoder]: Factory method 'passwordEncoder' threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	log cannot be resolved
+	log cannot be resolved
+
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 38 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	log cannot be resolved
+	log cannot be resolved
+
+	at com.sh.app.common.aop.LogAspect.log(LogAspect.java:51)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:634)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:624)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:72)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at com.sh.app.config.WebSecurityConfig$$EnhancerBySpringCGLIB$$d5dcb29e.passwordEncoder(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 39 common frames omitted
+2023-08-05 22:45:40.169 INFO  324  [ background-preinit ] o.h.v.i.util.Version.<clinit> : HV000001: Hibernate Validator 6.0.1.Final
+2023-08-05 22:45:40.170 INFO  325  [ restartedMain ] c.s.a.HelloSpringbootApplication.logStarting : Starting HelloSpringbootApplication using Java 11.0.20 on DESKTOP-0HAIVE8 with PID 19384 (D:\Workspaces\spring_workspaces\hello-springboot\target\classes started by sukey in D:\Workspaces\spring_workspaces\hello-springboot)
+2023-08-05 22:45:40.171 DEBUG 326  [ restartedMain ] c.s.a.HelloSpringbootApplication.logStarting : Running with Spring Boot v2.7.14, Spring v5.3.29
+2023-08-05 22:45:40.171 INFO  326  [ restartedMain ] c.s.a.HelloSpringbootApplication.logStartupProfileInfo : No active profile set, falling back to 1 default profile: "default"
+2023-08-05 22:45:40.192 INFO  347  [ restartedMain ] o.s.b.d.r.ChangeableUrls.logTo : The Class-Path manifest attribute in C:\Users\sukey\.m2\repository\com\oracle\database\jdbc\ojdbc8\21.5.0.0\ojdbc8-21.5.0.0.jar referenced one or more files that do not exist: file:/C:/Users/sukey/.m2/repository/com/oracle/database/jdbc/ojdbc8/21.5.0.0/oraclepki.jar
+2023-08-05 22:45:40.192 INFO  347  [ restartedMain ] o.s.b.d.r.ChangeableUrls.logTo : The Class-Path manifest attribute in C:\Users\sukey\.m2\repository\com\oracle\database\jdbc\ojdbc11\23.2.0.0\ojdbc11-23.2.0.0.jar referenced one or more files that do not exist: file:/C:/Users/sukey/.m2/repository/com/oracle/database/jdbc/ojdbc11/23.2.0.0/oraclepki.jar
+2023-08-05 22:45:40.192 INFO  347  [ restartedMain ] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-08-05 22:45:40.193 INFO  348  [ restartedMain ] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-08-05 22:45:40.824 INFO  979  [ restartedMain ] o.s.b.w.e.t.TomcatWebServer.initialize : Tomcat initialized with port(s): 8080 (http)
+2023-08-05 22:45:40.829 INFO  984  [ restartedMain ] o.a.c.h.Http11NioProtocol.log : Initializing ProtocolHandler ["http-nio-8080"]
+2023-08-05 22:45:40.830 INFO  985  [ restartedMain ] o.a.c.c.StandardService.log : Starting service [Tomcat]
+2023-08-05 22:45:40.830 INFO  985  [ restartedMain ] o.a.c.c.StandardEngine.log : Starting Servlet engine: [Apache Tomcat/9.0.78]
+2023-08-05 22:45:40.955 INFO  1110 [ restartedMain ] o.a.j.s.TldScanner.log : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-08-05 22:45:40.964 INFO  1119 [ restartedMain ] o.a.c.c.C.[.[.[/spring].log : Initializing Spring embedded WebApplicationContext
+2023-08-05 22:45:40.964 INFO  1119 [ restartedMain ] o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext : Root WebApplicationContext: initialization completed in 771 ms
+2023-08-05 22:45:41.056 WARN  1211 [ restartedMain ] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webSecurityConfig': Unsatisfied dependency expressed through field 'memberService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'memberServiceImpl': Unsatisfied dependency expressed through field 'memberRepository'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.sh.app.member.repository.MemberRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2023-08-05 22:45:41.057 INFO  1212 [ restartedMain ] o.a.c.c.StandardService.log : Stopping service [Tomcat]
+2023-08-05 22:45:41.083 INFO  1238 [ restartedMain ] o.s.b.a.l.ConditionEvaluationReportLoggingListener.logMessage : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-08-05 22:45:41.095 ERROR 1250 [ restartedMain ] o.s.b.d.LoggingFailureAnalysisReporter.report : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field memberRepository in com.sh.app.member.service.MemberServiceImpl required a bean of type 'com.sh.app.member.repository.MemberRepository' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.sh.app.member.repository.MemberRepository' in your configuration.
+
+2023-08-05 22:47:22.368 INFO  329  [ restartedMain ] c.s.a.HelloSpringbootApplication.logStarting : Starting HelloSpringbootApplication using Java 11.0.20 on DESKTOP-0HAIVE8 with PID 22200 (D:\Workspaces\spring_workspaces\hello-springboot\target\classes started by sukey in D:\Workspaces\spring_workspaces\hello-springboot)
+2023-08-05 22:47:22.368 INFO  329  [ background-preinit ] o.h.v.i.util.Version.<clinit> : HV000001: Hibernate Validator 6.2.5.Final
+2023-08-05 22:47:22.369 DEBUG 330  [ restartedMain ] c.s.a.HelloSpringbootApplication.logStarting : Running with Spring Boot v2.7.14, Spring v5.3.29
+2023-08-05 22:47:22.369 INFO  330  [ restartedMain ] c.s.a.HelloSpringbootApplication.logStartupProfileInfo : No active profile set, falling back to 1 default profile: "default"
+2023-08-05 22:47:22.390 INFO  351  [ restartedMain ] o.s.b.d.r.ChangeableUrls.logTo : The Class-Path manifest attribute in C:\Users\sukey\.m2\repository\com\oracle\database\jdbc\ojdbc8\21.5.0.0\ojdbc8-21.5.0.0.jar referenced one or more files that do not exist: file:/C:/Users/sukey/.m2/repository/com/oracle/database/jdbc/ojdbc8/21.5.0.0/oraclepki.jar
+2023-08-05 22:47:22.390 INFO  351  [ restartedMain ] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-08-05 22:47:22.390 INFO  351  [ restartedMain ] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-08-05 22:47:23.092 INFO  1053 [ restartedMain ] o.s.b.w.e.t.TomcatWebServer.initialize : Tomcat initialized with port(s): 8080 (http)
+2023-08-05 22:47:23.097 INFO  1058 [ restartedMain ] o.a.c.h.Http11NioProtocol.log : Initializing ProtocolHandler ["http-nio-8080"]
+2023-08-05 22:47:23.098 INFO  1059 [ restartedMain ] o.a.c.c.StandardService.log : Starting service [Tomcat]
+2023-08-05 22:47:23.098 INFO  1059 [ restartedMain ] o.a.c.c.StandardEngine.log : Starting Servlet engine: [Apache Tomcat/9.0.78]
+2023-08-05 22:47:23.222 INFO  1183 [ restartedMain ] o.a.j.s.TldScanner.log : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-08-05 22:47:23.231 INFO  1192 [ restartedMain ] o.a.c.c.C.[.[.[/spring].log : Initializing Spring embedded WebApplicationContext
+2023-08-05 22:47:23.231 INFO  1192 [ restartedMain ] o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext : Root WebApplicationContext: initialization completed in 840 ms
+2023-08-05 22:47:23.486 WARN  1447 [ restartedMain ] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'memberSecurityController': Unsatisfied dependency expressed through field 'passwordEncoder'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'passwordEncoder' defined in class path resource [com/sh/app/config/WebSecurityConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.crypto.password.PasswordEncoder]: Factory method 'passwordEncoder' threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	log cannot be resolved
+	log cannot be resolved
+
+2023-08-05 22:47:23.488 INFO  1449 [ restartedMain ] o.a.c.c.StandardService.log : Stopping service [Tomcat]
+2023-08-05 22:47:23.495 INFO  1456 [ restartedMain ] o.s.b.a.l.ConditionEvaluationReportLoggingListener.logMessage : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-08-05 22:47:23.505 ERROR 1466 [ restartedMain ] o.s.b.SpringApplication.reportFailure : Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'memberSecurityController': Unsatisfied dependency expressed through field 'passwordEncoder'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'passwordEncoder' defined in class path resource [com/sh/app/config/WebSecurityConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.crypto.password.PasswordEncoder]: Factory method 'passwordEncoder' threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	log cannot be resolved
+	log cannot be resolved
+
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:662)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:642)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:921)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.sh.app.HelloSpringbootApplication.main(HelloSpringbootApplication.java:21)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'passwordEncoder' defined in class path resource [com/sh/app/config/WebSecurityConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.crypto.password.PasswordEncoder]: Factory method 'passwordEncoder' threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	log cannot be resolved
+	log cannot be resolved
+
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:486)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:659)
+	... 25 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.crypto.password.PasswordEncoder]: Factory method 'passwordEncoder' threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	log cannot be resolved
+	log cannot be resolved
+
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 38 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	log cannot be resolved
+	log cannot be resolved
+
+	at com.sh.app.common.aop.LogAspect.log(LogAspect.java:51)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:634)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:624)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:72)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at com.sh.app.config.WebSecurityConfig$$EnhancerBySpringCGLIB$$d90117d9.passwordEncoder(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 39 common frames omitted
+2023-08-05 23:02:44.321 INFO  351  [ restartedMain ] c.s.a.HelloSpringbootApplication.logStarting : Starting HelloSpringbootApplication using Java 11.0.20 on DESKTOP-0HAIVE8 with PID 23368 (D:\Workspaces\spring_workspaces\hello-springboot\target\classes started by sukey in D:\Workspaces\spring_workspaces\hello-springboot)
+2023-08-05 23:02:44.321 INFO  351  [ background-preinit ] o.h.v.i.util.Version.<clinit> : HV000001: Hibernate Validator 6.2.5.Final
+2023-08-05 23:02:44.322 DEBUG 352  [ restartedMain ] c.s.a.HelloSpringbootApplication.logStarting : Running with Spring Boot v2.7.14, Spring v5.3.29
+2023-08-05 23:02:44.323 INFO  353  [ restartedMain ] c.s.a.HelloSpringbootApplication.logStartupProfileInfo : No active profile set, falling back to 1 default profile: "default"
+2023-08-05 23:02:44.344 INFO  374  [ restartedMain ] o.s.b.d.r.ChangeableUrls.logTo : The Class-Path manifest attribute in C:\Users\sukey\.m2\repository\com\oracle\database\jdbc\ojdbc8\21.5.0.0\ojdbc8-21.5.0.0.jar referenced one or more files that do not exist: file:/C:/Users/sukey/.m2/repository/com/oracle/database/jdbc/ojdbc8/21.5.0.0/oraclepki.jar
+2023-08-05 23:02:44.344 INFO  374  [ restartedMain ] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-08-05 23:02:44.345 INFO  375  [ restartedMain ] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-08-05 23:02:45.044 INFO  1074 [ restartedMain ] o.s.b.w.e.t.TomcatWebServer.initialize : Tomcat initialized with port(s): 8080 (http)
+2023-08-05 23:02:45.050 INFO  1080 [ restartedMain ] o.a.c.h.Http11NioProtocol.log : Initializing ProtocolHandler ["http-nio-8080"]
+2023-08-05 23:02:45.051 INFO  1081 [ restartedMain ] o.a.c.c.StandardService.log : Starting service [Tomcat]
+2023-08-05 23:02:45.051 INFO  1081 [ restartedMain ] o.a.c.c.StandardEngine.log : Starting Servlet engine: [Apache Tomcat/9.0.78]
+2023-08-05 23:02:45.185 INFO  1215 [ restartedMain ] o.a.j.s.TldScanner.log : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-08-05 23:02:45.194 INFO  1224 [ restartedMain ] o.a.c.c.C.[.[.[/spring].log : Initializing Spring embedded WebApplicationContext
+2023-08-05 23:02:45.194 INFO  1224 [ restartedMain ] o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext : Root WebApplicationContext: initialization completed in 849 ms
+2023-08-05 23:02:45.459 DEBUG 1489 [ restartedMain ] c.s.a.c.a.LogAspect.log : [Before] com.sh.app.config.WebSecurityConfig.passwordEncoder
+2023-08-05 23:02:45.463 DEBUG 1493 [ restartedMain ] c.s.a.c.a.LogAspect.log : [After] com.sh.app.config.WebSecurityConfig.passwordEncoder
+2023-08-05 23:02:45.516 DEBUG 1546 [ restartedMain ] c.s.a.c.a.LogAspect.log : [Before] com.sh.app.config.WebSecurityConfig.tokenRepository
+2023-08-05 23:02:45.519 DEBUG 1549 [ restartedMain ] c.s.a.c.a.LogAspect.log : [After] com.sh.app.config.WebSecurityConfig.tokenRepository
+2023-08-05 23:02:45.535 DEBUG 1565 [ restartedMain ] c.s.a.c.a.LogAspect.log : [Before] com.sh.app.config.AppConfig.addInterceptors
+2023-08-05 23:02:45.536 DEBUG 1566 [ restartedMain ] c.s.a.c.a.LogAspect.log : [After] com.sh.app.config.AppConfig.addInterceptors
+2023-08-05 23:02:45.639 WARN  1669 [ restartedMain ] o.s.s.c.a.w.b.WebSecurity.performBuild : You are asking Spring Security to ignore Mvc [pattern='/resources/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-08-05 23:02:45.639 INFO  1669 [ restartedMain ] o.s.s.w.DefaultSecurityFilterChain.<init> : Will not secure Mvc [pattern='/resources/**']
+2023-08-05 23:02:45.670 INFO  1700 [ restartedMain ] o.s.s.w.DefaultSecurityFilterChain.<init> : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@9952659, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6701f200, org.springframework.security.web.context.SecurityContextPersistenceFilter@50150dd9, org.springframework.security.web.header.HeaderWriterFilter@7cfd66e2, org.springframework.security.web.csrf.CsrfFilter@6d7e314f, org.springframework.security.web.authentication.logout.LogoutFilter@455cfefc, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6e800f44, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@22491772, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1b9bc84, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@3a513457, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6a2ab3b5, org.springframework.security.web.session.SessionManagementFilter@6ecff5dd, org.springframework.security.web.access.ExceptionTranslationFilter@c89c5f5, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@306bdcc0]
+2023-08-05 23:02:45.807 INFO  1837 [ restartedMain ] o.s.b.d.a.OptionalLiveReloadServer.startServer : LiveReload server is running on port 35729
+2023-08-05 23:02:45.815 INFO  1845 [ restartedMain ] o.a.c.h.Http11NioProtocol.log : Starting ProtocolHandler ["http-nio-8080"]
+2023-08-05 23:02:45.829 INFO  1859 [ restartedMain ] o.s.b.w.e.t.TomcatWebServer.start : Tomcat started on port(s): 8080 (http) with context path '/spring'
+2023-08-05 23:02:45.836 INFO  1866 [ restartedMain ] c.s.a.HelloSpringbootApplication.logStarted : Started HelloSpringbootApplication in 1.74 seconds (JVM running for 2.413)
+2023-08-05 23:06:53.838 INFO  249868 [ RMI TCP Connection(12)-127.0.0.1 ] o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown : Application shutdown requested.
+2023-08-05 23:06:54.055 INFO  250085 [ RMI TCP Connection(12)-127.0.0.1 ] o.a.c.h.Http11NioProtocol.log : Pausing ProtocolHandler ["http-nio-8080"]
+2023-08-05 23:06:54.056 INFO  250086 [ RMI TCP Connection(12)-127.0.0.1 ] o.a.c.c.StandardService.log : Stopping service [Tomcat]
+2023-08-05 23:06:54.060 INFO  250090 [ RMI TCP Connection(12)-127.0.0.1 ] o.a.c.h.Http11NioProtocol.log : Stopping ProtocolHandler ["http-nio-8080"]
+2023-08-05 23:06:54.062 INFO  250092 [ RMI TCP Connection(12)-127.0.0.1 ] o.a.c.h.Http11NioProtocol.log : Destroying ProtocolHandler ["http-nio-8080"]

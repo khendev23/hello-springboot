@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sh.app.demo.repository.DemoRepository">
+  <insert id="insertDev">
+  	insert into
+  		dev
+  	values(
+  		seq_dev_id.nextval, 
+  		#{name}, 
+  		#{career}, 
+  		#{email}, 
+  		#{gender}, 
+  		#{lang, typeHandler=stringListTypeHandler}, 
+  		default
+  	)
+  </insert>
+  
+  <select id="findAllDev" resultMap="devMap">
+  	select 
+  		*
+  	from 
+  		dev
+  	order by
+  		id desc
+  </select>
+  
+  <select id="findDevById" resultMap="devMap">
+  	select
+  		*
+  	from 
+  		dev
+  	where
+  		id = #{id}
+  </select>
+  
+  <update id="updateDev">
+  	update 
+  		dev
+  	set
+  		name = #{name},
+  		career = #{career},
+  		email = #{email},
+  		gender = #{gender},
+  		lang = #{lang, typeHandler=stringListTypeHandler}  		
+  	where
+  		id = #{id}
+  </update>
+  
+  <delete id="deleteDev">
+  	delete from
+  		dev
+  	where
+  		id = #{id}
+  </delete>
+  
+  <!-- column/property 값이 동일하다면 id/result태그는 생략가능 -->
+  <!-- mybatis-config.xml setting[name=mapUnderscoreToCamelCase] 설정을 통해 처리가능 -->
+  <!-- jdbcType/javaType/typeHandler설정이 필요한 경우만 작성! -->
+  <resultMap type="dev" id="devMap">
+  	<!-- pk 컬럼용 -->
+  	<!-- <id column="id" property="id"/> -->
+  	<!-- 그외 컬럼용 -->
+  	<!-- <result column="name" property="name"/> -->
+  	<!-- <result column="career" property="career"/> -->
+  	<!-- <result column="email" property="email"/> -->
+  	<!-- <result column="gender" property="gender"/> -->
+  	<!-- <result column="lang" property="lang" typeHandler="stringListTypeHandler"/> -->
+  	<!-- <result column="created_at" property="createdAt"/> -->
+  </resultMap>
+</mapper>
