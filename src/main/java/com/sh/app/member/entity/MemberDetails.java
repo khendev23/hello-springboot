@@ -63,10 +63,6 @@ public class MemberDetails extends Member implements UserDetails {
 		return true;
 	}
 
-	@Override
-	public String getPassword() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	
 
 }

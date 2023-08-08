@@ -18,12 +18,6 @@ spring:
     url: jdbc:oracle:thin:@localhost:1521:xe
     username: spring
     password: spring
-  servlet:
-    multipart:
-      max-file-size: 10MB
-      max-request-size: 50MB
-      location: E:/Workspaces/spring_workspace/hello-springboot/src/main/webapp/resources/upload/board
-        
 
 # logback
 logging:

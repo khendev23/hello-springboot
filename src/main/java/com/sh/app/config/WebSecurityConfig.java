@@ -73,6 +73,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		http.authorizeRequests()
 			.antMatchers("/", "/index.jsp").permitAll()
 			.antMatchers("/member/memberCreate.do", "/member/checkIdDuplicate.do").anonymous()
+			.antMatchers("/board/boardList.do").permitAll()
 	//		.antMatchers("/admin/**").hasRole("ADMIN")
 			.antMatchers("/admin/**").hasAuthority("ROLE_ADMIN")
 			.anyRequest().authenticated();
