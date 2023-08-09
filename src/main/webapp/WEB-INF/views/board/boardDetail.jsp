@@ -15,7 +15,7 @@ div#board-container label.custom-file-label{text-align:left;}
 </style>
 <div id="board-container" class="mx-auto text-center">
 	<input type="text" class="form-control" placeholder="제목" name="title" id="title" value="${board.title}" required>
-	<input type="text" class="form-control" name="memberId" value="${board.memberId}" readonly required>
+	<input type="text" class="form-control" name="memberId" value="${board.member.name} ${board.memberId}" readonly required>
 	
 	<!-- 클릭시 /board/fileDownload.do?id=첨부파일아이디 -->
 	<c:forEach items="${board.attachments}" var="attach" varStatus="vs">

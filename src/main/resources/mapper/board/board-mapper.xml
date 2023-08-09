@@ -5,6 +5,7 @@
 <mapper namespace="com.sh.app.board.repository.BoardRepository">
   <select id="findById" resultMap="boardDetailsMap">
   	select
+	    m.*,
 	    b.*,
 	    a.id attach_id,
 	    a.board_id,
@@ -12,8 +13,11 @@
 	    a.renamed_filename,
 	    a.created_at attach_created_at
 	from
-	    board b left join attachment a
-	        on b.id = a.board_id
+	    board b 
+	    	left join attachment a
+	        	on b.id = a.board_id
+	        left join member m
+	        	on b.member_id = m.member_id
 	where
 	    b.id = #{id}
   		
@@ -30,7 +34,12 @@
   	<result column="member_id" property="memberId"/>
   	<result column="content" property="content"/>
   	<result column="created_at" property="createdAt"/>
-  	
+  	<association property="member" javaType="member">
+  		<id column="member_Id" property="memberId"/>
+  		<result column="name" property="name"/>
+  		<result column="birthday" property="birthday"/>
+  		<result column="email" property="email"/>
+  	</association>
   	<collection property="attachments" ofType="attachment">
   		<id column="attach_id" property="id"/>
   		<result column="board_id" property="boardId"/>

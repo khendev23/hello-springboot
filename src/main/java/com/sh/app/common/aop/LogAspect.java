@@ -49,11 +49,11 @@ public class LogAspect {
 		String methodName = signature.getName(); // 메소드 이름
 		
 		// joinPoint 실행전
-		log.debug("[Before] {}.{}", type, methodName);
+		// log.debug("[Before] {}.{}", type, methodName);
 		
 		Object returnValue = joinPoint.proceed();
 		// joinPoint 실행후
-		log.debug("[After] {}.{}", type, methodName);
+		// log.debug("[After] {}.{}", type, methodName);
 		
 		return returnValue;
 	}

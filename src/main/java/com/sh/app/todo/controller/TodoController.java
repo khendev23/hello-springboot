@@ -35,14 +35,14 @@ public class TodoController {
 	public void todo(
 			@AuthenticationPrincipal MemberDetails member, 
 			Model model) { 
-		if(true)
-			throw new RuntimeException("Todododododododoodo");
+//		if(true)
+//			throw new RuntimeException("Todododododododoodo");
 		
 		// 의존주입 받은 todoService
 		log.debug("todoService = {} {}", todoService, todoService.getClass());
 		
-//		if(member.getMemberId() == null) 
-//			throw new RuntimeException("memberId is null");
+		if(member.getMemberId() == null) 
+			throw new RuntimeException("memberId is null");
 		
 		List<Todo> todos = todoService.findAllByMemberId(member.getMemberId());
 		model.addAttribute("todos", todos);

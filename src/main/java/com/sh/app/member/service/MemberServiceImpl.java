@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.sh.app.member.dto.MemberCreateDto;
 import com.sh.app.member.entity.Member;
@@ -11,6 +12,7 @@ import com.sh.app.member.repository.MemberRepository;
 
 import lombok.extern.slf4j.Slf4j;
 
+@Transactional(rollbackFor = Exception.class)
 @Service
 @Slf4j
 public class MemberServiceImpl implements MemberService {
@@ -20,7 +22,13 @@ public class MemberServiceImpl implements MemberService {
 	
 	@Override
 	public int insertMember(MemberCreateDto member) {
-		return memberRepository.insertMember(member);
+		int result = 0;
+		// member테이블 등록
+		result = memberRepository.insertMember(member);
+		// authority테이블 등록
+		result = memberRepository.insertAuthority(member);
+		
+		return result;
 	}
 	@Override
 	public Member findMemberById(String memberId) {

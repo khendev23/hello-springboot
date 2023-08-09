@@ -17,7 +17,9 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.ResourceLoader;
 import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -142,8 +144,8 @@ public class BoardController {
 	 * - ResourceLoader객체에 전달한 location값에 따라 구현객체를 자동으로 얻어낼 수 있다.
 	 * 
 	 */
-	@GetMapping("/fileDownload.do")
-	@ResponseBody // return 객체를 응답메세지에 직접 출력
+//	@GetMapping("/fileDownload.do")
+//	@ResponseBody // return 객체를 응답메세지에 직접 출력
 	public Resource fileDownload(@RequestParam int id, HttpServletResponse response) 
 							throws UnsupportedEncodingException, FileNotFoundException {
 		// 1. db조회
@@ -157,7 +159,7 @@ public class BoardController {
 		if(!downFile.exists())
 			throw new FileNotFoundException(attach.getRenamedFilename());
 		
-		String location = "file:" + downFile;;
+		String location = "file:" + downFile;; // FileSystemResource 구현객체
 		// file:///E:/Workspaces/spring_workspace/hello-springboot/src/main/webapp/resources/upload/board/20230807_151005632_862.png
 		Resource resource = resourceLoader.getResource(location);         
 		
@@ -167,6 +169,37 @@ public class BoardController {
 		response.addHeader(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=" + filename);
 		
 		return resource;
+	}
+	
+	@GetMapping("/fileDownload.do")
+//	@ResponseBody // return 객체를 응답메세지에 직접 출력
+	public ResponseEntity<Resource> fileDownload(@RequestParam int id) 
+							throws UnsupportedEncodingException, FileNotFoundException {
+		// 1. db조회
+		Attachment attach = boardService.findAttachmentById(id);
+		log.debug("attach = {}", attach);
+		log.debug("multipartLocation = {}", multipartLocation);
+		
+		// 2. Resource객체 생성
+		File downFile = new File(multipartLocation, attach.getRenamedFilename());
+		
+		if(!downFile.exists())
+			throw new FileNotFoundException(attach.getRenamedFilename());
+		
+		String location = "file:" + downFile;; // FileSystemResource 구현객체
+		// file:///E:/Workspaces/spring_workspace/hello-springboot/src/main/webapp/resources/upload/board/20230807_151005632_862.png
+		Resource resource = resourceLoader.getResource(location);         
+		
+		// 3. 응답헤더 작성
+		String filename = URLEncoder.encode(attach.getOriginalFilename(), "utf-8");
+		HttpHeaders headers = new HttpHeaders();
+		headers.add(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_OCTET_STREAM_VALUE);
+		headers.add(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=" + filename);
+		
+		return ResponseEntity
+				.status(HttpStatus.OK)
+				.headers(headers)
+				.body(resource);
 	}
 	
 }

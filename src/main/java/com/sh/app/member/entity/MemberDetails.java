@@ -2,17 +2,20 @@ package com.sh.app.member.entity;
 
 import java.util.Collection;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.oauth2.core.user.OAuth2User;
 
 import lombok.Data;
 import lombok.ToString;
+import lombok.experimental.SuperBuilder;
 
 @Data
 @ToString(callSuper = true)
-public class MemberDetails extends Member implements UserDetails {
+public class MemberDetails extends Member implements UserDetails, OAuth2User {
 	
 	/**
 	 * WAS상에서 MemberDetails객체 단위로 입출력 진행시의 식별번호
@@ -20,6 +23,13 @@ public class MemberDetails extends Member implements UserDetails {
 	private static final long serialVersionUID = 1L;
 	
 	private List<SimpleGrantedAuthority> authorities;
+	
+	private Map<String, Object> attributes;
+	
+	@Override
+	public Map<String, Object> getAttributes() {
+		return attributes;
+	}
 	
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
@@ -62,7 +72,5 @@ public class MemberDetails extends Member implements UserDetails {
 	public boolean isEnabled() {
 		return true;
 	}
-
-	
 
 }
