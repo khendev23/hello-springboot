@@ -15859,3 +15859,7 @@ public com.sh.app.ws.dto.Payload com.sh.app.ws.controller.StompMessageController
 2023-08-09 17:49:40.887 INFO  1656659 [ RMI TCP Connection(41)-127.0.0.1 ] o.s.m.s.b.SimpleBrokerMessageHandler.info : Stopping...
 2023-08-09 17:49:40.887 INFO  1656659 [ RMI TCP Connection(41)-127.0.0.1 ] o.s.m.s.b.SimpleBrokerMessageHandler.info : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@5e68ed8a]]
 2023-08-09 17:49:40.888 INFO  1656660 [ RMI TCP Connection(41)-127.0.0.1 ] o.s.m.s.b.SimpleBrokerMessageHandler.info : Stopped.
+2023-08-09 17:49:41.358 INFO  1657130 [ RMI TCP Connection(41)-127.0.0.1 ] o.a.c.h.Http11NioProtocol.log : Pausing ProtocolHandler ["http-nio-8080"]
+2023-08-09 17:49:41.358 INFO  1657130 [ RMI TCP Connection(41)-127.0.0.1 ] o.a.c.c.StandardService.log : Stopping service [Tomcat]
+2023-08-09 17:49:41.367 INFO  1657139 [ RMI TCP Connection(41)-127.0.0.1 ] o.a.c.h.Http11NioProtocol.log : Stopping ProtocolHandler ["http-nio-8080"]
+2023-08-09 17:49:41.371 INFO  1657143 [ RMI TCP Connection(41)-127.0.0.1 ] o.a.c.h.Http11NioProtocol.log : Destroying ProtocolHandler ["http-nio-8080"]
