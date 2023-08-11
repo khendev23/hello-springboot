@@ -37,6 +37,7 @@ import com.sh.app.board.entity.BoardDetails;
 import com.sh.app.board.service.BoardService;
 import com.sh.app.common.HelloSpringUtils;
 import com.sh.app.member.entity.MemberDetails;
+import com.sh.app.notification.service.NotificationService;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -47,6 +48,9 @@ public class BoardController {
 
 	@Autowired
 	private BoardService boardService;
+	
+	@Autowired
+	private NotificationService notificationService;
 	
 	// Resource 빈 등록
 	@Autowired
@@ -122,6 +126,9 @@ public class BoardController {
 		log.debug("board = {}", board);
 		
 		int result = boardService.insertBoard(board);
+		
+		// 3. 특정 사용자에게 실시간 알림
+		result = notificationService.notifyBoardCreate(board);
 		
 		return "redirect:/board/boardList.do";
 	}

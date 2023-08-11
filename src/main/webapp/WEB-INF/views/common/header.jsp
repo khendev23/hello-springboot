@@ -84,6 +84,7 @@
 			    	<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/board/boardList.do">게시판</a></li>
                     <li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/todo/todo.do">Todo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/menu/menu.do">Menu</a></li>
                     <li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/admin/admin.do">관리자</a></li>
                     <!-- 데모메뉴 DropDown -->
                     <!--https://getbootstrap.com/docs/4.1/components/navbar/#supported-content-->
